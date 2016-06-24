@@ -109,7 +109,7 @@ class AdminServiceProvider extends ServiceProvider
             ->name('/^.+\.php$/')
             ->notName('routes.php')
             ->notName('navigation.php')
-            ->in($directory)->sort(function ($a) {
+            ->in($directory.'/Model')->sort(function ($a) {
                 return $a->getFilename() != 'bootstrap.php';
             });
 
